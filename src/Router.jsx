@@ -31,19 +31,17 @@ import LineShape from "./pages/d3js/09/index.jsx";
 import PieShape from "./pages/d3js/10/index.jsx";
 import BarShape from "./pages/d3js/11/index.jsx";
 import StackedBarChart from "./pages/d3js/12/index.jsx";
-import Map from "./pages/map";
-import Map01 from "./pages/map/01";
-import Map0101 from "./pages/map/01/01";
-import Map0102 from "./pages/map/01/02";
-import Map0103 from "./pages/map/01/03";
-import Map02 from "./pages/map/02";
-import Map0201 from "./pages/map/02/01";
-import Map0202 from "./pages/map/02/02";
-import Map0203 from "./pages/map/02/03";
-import Map03 from "./pages/map/03";
-import Map0301 from "./pages/map/03/01";
-import Map0302 from "./pages/map/03/02";
-import Map04 from "./pages/map/04";
+import Map from "./pages/leafletjs";
+import Map01 from "./pages/leafletjs/01";
+import Map0101 from "./pages/leafletjs/01/01";
+import Map0102 from "./pages/leafletjs/01/02";
+import Map0103 from "./pages/leafletjs/01/03";
+import Map02 from "./pages/leafletjs/02";
+import Map0201 from "./pages/leafletjs/02/01";
+import Map0202 from "./pages/leafletjs/02/02";
+import Map0203 from "./pages/leafletjs/02/03";
+import Map03 from "./pages/leafletjs/03";
+import Map04 from "./pages/leafletjs/04";
 import Dashboard from "./pages/chartjs/Dashboard/index.jsx";
 
 const router = createBrowserRouter([
@@ -186,7 +184,7 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "map",
+        path: "leafletjs",
         element: <Map />,
         children: [
           {
@@ -210,10 +208,6 @@ const router = createBrowserRouter([
           {
             path: "03 Vector",
             element: <Map03 />,
-            children: [
-              { path: "Vector", element: <Map0301 /> },
-              { path: "2", element: <Map0302 /> },
-            ],
           },
           {
             path: "map with CSV",

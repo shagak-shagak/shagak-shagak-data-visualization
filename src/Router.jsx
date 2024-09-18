@@ -94,7 +94,7 @@ const router = createBrowserRouter([
             element: <BubbleChart />,
           },
           {
-            path: "doughnutpiechart",
+            path: "doughnut-piechart",
             element: <DoughnutPieChart />,
           },
           {
@@ -122,7 +122,7 @@ const router = createBrowserRouter([
             element: <ScatterChart />,
           },
           {
-            path: "mbti",
+            path: "MBTI",
             element: <MBTI />,
           },
           {

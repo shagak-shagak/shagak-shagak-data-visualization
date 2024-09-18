@@ -6,10 +6,14 @@ const LnbItem = ({ route, parentPath = "", isOpen, onToggle }) => {
   const hasChildren = route.children && route.children.length > 0;
   const fullPath = `${parentPath}/${route.path}`;
 
+  const menuName = route.path
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+
   return (
     <li className={`gnb-item ${isOpen ? "open" : ""}`}>
       <Link to={fullPath} onClick={hasChildren ? onToggle : undefined}>
-        {route.path}
+        {menuName}
       </Link>
       {hasChildren && (
         <ul className={`subRoutes ${isOpen ? "expanded" : ""}`}>

@@ -1,4 +1,4 @@
-import { Doughnut } from "react-chartjs-2";
+import { Doughnut, Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -35,6 +35,8 @@ const DoughnutPieChart = () => {
     <div>
       <h2>Doughnut Chart</h2>
       <Doughnut data={data} />
+      <h2>Pie Chart</h2>
+      <Pie data={data} />
     </div>
   );
 };

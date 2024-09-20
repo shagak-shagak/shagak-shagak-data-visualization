@@ -1,6 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import Canvas from "./pages/canvas";
 import App from "./App";
+import Canvas from "./pages/canvas";
+import BeginPath from "./pages/canvas/BeginPath";
+import FillRect from "./pages/canvas/FillRect";
+import Sin from "./pages/canvas/Sin";
+import SunriseSunset from "./pages/canvas/SunriseSunset";
+import Triangle from "./pages/canvas/Triangle";
 import ChartJs from "./pages/chartjs";
 import D3js from "./pages/d3js";
 import Map from "./pages/map";
@@ -47,94 +52,93 @@ import BarShape from "./pages/d3js/10_bar_shape/index.jsx";
 import Selection from "./pages/d3js/04_selection/index.jsx";
 import ActualEx1 from "./pages/d3js/13_actual_ex/index.jsx";
 
-
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     children: [
       {
-        path: 'canvas',
+        path: "canvas",
         element: <Canvas />,
         children: [
           {
-            path: 'FillRect',
+            path: "FillRect",
             element: <FillRect />,
           },
           {
-            path: 'BeginPath',
+            path: "BeginPath",
             element: <BeginPath />,
           },
           {
-            path: 'Triangle',
+            path: "Triangle",
             element: <Triangle />,
           },
           {
-            path: 'Sin',
+            path: "Sin",
             element: <Sin />,
           },
           {
-            path: 'Sunrise_Sunset',
+            path: "Sunrise_Sunset",
             element: <SunriseSunset />,
           },
         ],
       },
       {
-        path: 'chartjs',
+        path: "chartjs",
         element: <ChartJs />,
         children: [
           {
-            path: 'areachart',
+            path: "areachart",
             element: <AreaChart />,
           },
           {
-            path: 'barchart',
+            path: "barchart",
             element: <BarChart />,
           },
           {
-            path: 'bubblechart',
+            path: "bubblechart",
             element: <BubbleChart />,
           },
           {
-            path: 'doughnutpiechart',
+            path: "doughnut-piechart",
             element: <DoughnutPieChart />,
           },
           {
-            path: 'linechart',
+            path: "linechart",
             element: <LineChart />,
           },
           {
-            path: 'mbti',
-            element: <MBTI />,
-          },
-          {
-            path: 'mixedchart',
+            path: "mixedchart",
             element: <MixedChart />,
           },
           {
-            path: 'olympic',
-            element: <Olympic />,
-          },
-          {
-            path: 'piechart',
+            path: "piechart",
             element: <PieChart />,
           },
           {
-            path: 'polarareachart',
+            path: "polarareachart",
             element: <PolarAreaChart />,
           },
           {
-            path: 'radarchart',
+            path: "radarchart",
             element: <RadarChart />,
           },
           {
-            path: 'scatterchart',
+            path: "scatterchart",
             element: <ScatterChart />,
+          },
+          {
+            path: "MBTI",
+            element: <MBTI />,
+          },
+          {
+            path: "dashboard",
+            element: <Dashboard />,
           },
         ],
       },
       {
-        path: 'd3js',
+        path: "d3js",
         element: <D3js />,
         children: [
           {
@@ -193,7 +197,7 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: 'map',
+        path: "leafletjs",
         element: <Map />,
         children: [
           {
@@ -217,10 +221,6 @@ const router = createBrowserRouter([
           {
             path: "03_svg3 Vector",
             element: <Map03 />,
-            children: [
-              { path: "Vector", element: <Map0301 /> },
-              { path: "2", element: <Map0302 /> },
-            ],
           },
           {
             path: "map with CSV",

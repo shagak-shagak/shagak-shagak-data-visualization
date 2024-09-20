@@ -22,7 +22,7 @@ ChartJS.register(
 
 <<<<<<< HEAD:src/pages/chartjs/06_MBTI/index.jsx
 const PersonalityCareerAssessment = () => {
-  // 06_MBTI 데이터
+  // 10_MBTI 데이터
   const mbtiData = {
     labels: [
       "외향성(E)",
@@ -36,7 +36,7 @@ const PersonalityCareerAssessment = () => {
     ],
     datasets: [
       {
-        label: "06_MBTI 수치",
+        label: "10_MBTI 수치",
         data: [65, 35, 55, 45, 70, 30, 40, 60],
         backgroundColor: [
           "rgba(255, 99, 132, 0.6)",
@@ -56,7 +56,7 @@ const PersonalityCareerAssessment = () => {
     responsive: true,
     plugins: {
       legend: { display: false },
-      title: { display: true, text: "06_MBTI 유형 분석" },
+      title: { display: true, text: "10_MBTI 유형 분석" },
     },
     scales: {
       y: {
